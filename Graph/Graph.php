@@ -60,7 +60,7 @@ class Graph
     }
 
     /**
-     *
+     * Снять все метки с вершин.
      */
     public function clean()
     {
