@@ -2,19 +2,32 @@
 
 namespace Abethropalle\Utils\Graph;
 
+/**
+ * Поиск цикла в графе.
+ *
+ * Производит поиск в ширину.
+ * Умеет возвращать какой-нибудь из найденных циклов.
+ */
 class DepthFirstSearchCycleDetector
 {
     protected $result = false;
     protected PathBuilder $path;
     protected $is_complete = false;
 
-    public function getCycle(){
+    /**
+     * Возвращает какой-нибудь цикл.
+     * @return PathBuilder
+     */
+    public function getCycle(): PathBuilder{
         if(! $this->is_complete){
             $this->detect();
         }
         return $this->path;
     }
 
+    /**
+     * @param Graph $graph
+     */
     public function __construct(protected Graph $graph){
         $this->path = new PathBuilder();
     }
@@ -41,7 +54,12 @@ class DepthFirstSearchCycleDetector
         $this->path->pop();
     }
 
-    public function detect(){
+    /**
+     * Определяет, есть ли цикл.
+     * @return bool
+     */
+    public function detect(): bool
+    {
         if($this->is_complete) return $this->result;
 
         foreach($this->graph->nodes() as $node){

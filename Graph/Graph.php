@@ -1,12 +1,22 @@
 <?php
+/*
+ * Copyright (c) Ronia Rebane 2021.
+ * Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted.
+ */
 
 namespace Abethropalle\Utils\Graph;
 
+/**
+ * Ориентированный размеченный граф.
+ */
 class Graph
 {
     protected $edges = [];
     protected $nodes = [];
 
+    /**
+     * @param Edge $e
+     */
     public function addEdge(Edge $e)
     {
         $source = $e->getSource();
@@ -21,11 +31,17 @@ class Graph
         $source->addChild($target);
     }
 
+    /**
+     * @param Node $n
+     */
     public function addNode(Node $n)
     {
         $this->nodes[] = $n;
     }
 
+    /**
+     * @return \Generator
+     */
     public function edges()
     {
         for ($i = 0; $i < count($this->edges); $i++) {
@@ -33,6 +49,9 @@ class Graph
         }
     }
 
+    /**
+     * @return \Generator
+     */
     public function nodes()
     {
         for ($i = 0; $i < count($this->nodes); $i++) {
@@ -40,6 +59,9 @@ class Graph
         }
     }
 
+    /**
+     *
+     */
     public function clean()
     {
         foreach ($this->nodes() as $node) {
@@ -47,6 +69,9 @@ class Graph
         }
     }
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         $result = '';
