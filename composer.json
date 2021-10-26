@@ -1,0 +1,19 @@
+{
+  "name": "abethropalle/utils",
+  "description": "A library for Abethropalle DI.",
+  "version": "1.0.0",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ronia Rebane"}
+  ],
+  "require": {
+    "php": "^8.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Abethropalle\\Utils\\": "src/"
+    }
+  }
+}
