@@ -1,3 +1,24 @@
+# Abethropalle utils
+A library for Abethropalle DI.
+
+## Installation:
+
+Add this to composer.json:
+
+```javascript
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Qurum/abethropalle-utils"
+        }
+    ],
+    "require": {
+        "abethropalle/utils": "^1.0.0"
+    }
+}
+```
+
 ## Graph
 Набор классов для работы с ориентированными размеченными графами.    
 **Graph** - класс графа, состоящего из **Node** и **Edge**.    
