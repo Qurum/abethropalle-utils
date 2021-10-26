@@ -14,10 +14,12 @@ Add this to composer.json:
         }
     ],
     "require": {
-        "abethropalle/utils": "^1.0.0"
+        "abethropalle/utils": "dev-master"
     }
 }
 ```
+You may be also interested in https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey
+
 
 ## Graph
 Набор классов для работы с ориентированными размеченными графами.    
