@@ -10,7 +10,7 @@ Add this to composer.json:
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/Qurum/abethropalle-utils"
+            "url": "https://git@github.com/Qurum/abethropalle-utils.git"
         }
     ],
     "require": {
